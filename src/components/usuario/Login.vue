@@ -1,22 +1,13 @@
 <template>
   <div>
-    <h1 class="centralizado">Cadastro de usuario</h1>
+    <h1 class="centralizado">Logar</h1>
     <h2 class="centralizado"></h2>
 
     <form @submit.prevent="gravar" ref="form">
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" class="form-control" v-model.lazy="usuario.nome" id="nome" autocomplete="off">
-      </div>
 
       <div class="form-group">
         <label for="login">Login</label>
         <input type="text" class="form-control" v-model.lazy="usuario.login" id="login" autocomplete="off">
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" v-model.lazy="usuario.email" id="email" autocomplete="off">
       </div>
 
       <div class="form-group">
@@ -25,7 +16,7 @@
       </div>
 
       <div class="centralizado">
-         <button type="submit" class="btn btn-primary">Cadastrar</button>
+         <button type="submit" class="btn btn-primary">Entrar</button>
       </div>
 
     </form>
