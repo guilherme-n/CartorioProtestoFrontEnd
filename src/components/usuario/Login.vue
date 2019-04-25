@@ -3,7 +3,7 @@
     <h1 class="centralizado">Logar</h1>
     <h2 class="centralizado"></h2>
 
-    <form @submit.prevent="gravar" ref="form">
+    <form @submit.prevent="logar" ref="form">
 
       <div class="form-group">
         <label for="login">Login</label>
@@ -35,20 +35,31 @@
     },
 
     methods: {
-
-      gravar() {
-        let url = 'http://localhost:8080/PDSCREST/api/users/';
-
+      
+      logar() {
         this.$http
-          .post(url, this.usuario)
-          .then(() => {
-            alert('Usuario cadastrado com sucesso');
-            this.$router.push('ListagemUsuario');
+          .post('http://localhost:8080/PDSCREST/api/users/login', this.usuario)
+          .then(response => {
+            console.log(response.headers.get('Authorization'));
           }, 
           err => {
-            console.log(err)
+            console.log(err);
           });
       },
+     /* logarComAuth() {
+        this.$auth.login(){
+          params: {auth: this.usuario},
+        }
+        this.$http
+          .post('http://localhost:8080/PDSCREST/api/users/login', this.usuario)
+          .then(response => {
+            this.$auth.
+            console.log(response.headers.get('Authorization'));
+          }, 
+          err => {
+            console.log(err);
+          });
+      },*/
     }
   }
 </script>
