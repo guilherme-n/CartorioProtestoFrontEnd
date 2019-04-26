@@ -40,7 +40,9 @@
         this.$http
           .post('http://localhost:8080/PDSCREST/api/users/login', this.usuario)
           .then(response => {
-            console.log(response.headers.get('Authorization'));
+            console.log(window.localStorage.getItem("token"));
+            // console.log(response.headers.get('Authorization'));
+            window.localStorage.setItem("token", response.headers.get('Authorization'));
           }, 
           err => {
             console.log(err);

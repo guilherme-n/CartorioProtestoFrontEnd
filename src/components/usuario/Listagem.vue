@@ -35,7 +35,7 @@
 
         created(){
             this.$http
-            .get('http://localhost:8080/PDSCREST/api/users/')
+            .get('http://localhost:8080/PDSCREST/api/users/', {headers: {"Authorization" : window.localStorage.getItem('token')}})
             .then(res => res.json())
             .then(usuarios => this.usuarios = usuarios, 
             err => {

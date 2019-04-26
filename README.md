@@ -4,6 +4,10 @@
 
 ## Build Setup
 
+# install node js
+brew update
+brew install node
+
 ``` bash
 # install dependencies
 npm install
