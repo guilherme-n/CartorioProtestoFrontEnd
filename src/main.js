@@ -14,6 +14,20 @@ const router = new VueRouter({
   mode: 'history'
 });
 
+// router.beforeEach((to, from, next) => {
+//   // redirect to login page if not logged in and trying to access a restricted page
+//   // const publicPages = ['/login'];
+//   // const authRequired = !publicPages.includes(to.path);
+//   const token = window.localStorage.getItem('token');
+  
+//    if (token == "" && to.path != "/login") {
+//     console.log(to);
+//     next('/login');
+//   }
+
+//   next();
+// })
+
 /*router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
   const publicPages = ['/login'];
