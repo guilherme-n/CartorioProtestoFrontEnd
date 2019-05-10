@@ -6,7 +6,7 @@
     <form @submit.prevent="gravar" ref="form">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" v-model.lazy="usuario.nome" id="nome" autocomplete="off">
+        <input type="text" class="form-control" v-model.lazy="usuario.nome" id="nome" autocomplete="new-password">
       </div>
 
       <div class="form-group">
@@ -16,12 +16,12 @@
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" v-model.lazy="usuario.email" id="email" autocomplete="off">
+        <input type="email" class="form-control" v-model.lazy="usuario.email" id="email" autocomplete="new-password">
       </div>
 
       <div class="form-group">
         <label for="senha">Senha</label>
-        <input type="password" class="form-control" v-model.lazy="usuario.senha" id="senha" autocomplete="off">
+        <input type="password" class="form-control" v-model.lazy="usuario.senha" id="senha" autocomplete="new-password">
       </div>
 
       <div class="centralizado">

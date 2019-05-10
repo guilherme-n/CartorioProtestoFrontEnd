@@ -5,18 +5,18 @@
         <table class="table table-striped table-bordered" >
             <thead>
                 <tr>
-                    <th scope="col"> ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Login</th>
-                    <th scope="col">Email</th>
+                    <th class="col-3">ID</th>
+                    <th class="col-4">Nome</th>
+                    <th class="col-2">Login</th>
+                    <th class="col-2">Email</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="usuario in usuarios">
-                    <td>{{ usuario.id }}</td>
-                    <td>{{ usuario.nome }}</td>
-                    <td>{{ usuario.login }}</td>
-                    <td>{{ usuario.email }}</td>
+                <tr v-for="usuario in usuarios" v-bind:key="usuario.id">
+                    <td class="col-3">{{ usuario.id }}</td>
+                    <td class="col-4">{{ usuario.nome }}</td>
+                    <td class="col-2">{{ usuario.login }}</td>
+                    <td class="col-2">{{ usuario.email }}</td>
                 </tr>
             </tbody>
         </table>

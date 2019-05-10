@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand" href="#">Hidden brand</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item" v-for="route in routes">
+          <li class="nav-item" v-for="route in routes" v-bind:key="route.path">
             <router-link :to="route.path" class="nav-link">{{ route.titulo }}</router-link>
           </li>
         </ul>

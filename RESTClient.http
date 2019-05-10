@@ -1,0 +1,14 @@
+# @name recupera usuarios
+GET http://localhost:8080/PDSCREST/api/users
+###
+
+
+# @name login
+POST http://localhost:8080/PDSCREST/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "login" : "gui123",
+    "senha" : "123"
+}
+###
